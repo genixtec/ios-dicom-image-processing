@@ -8,12 +8,27 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIScrollViewDelegate {
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var dicomImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        scrollView.delegate = self
+        scrollView.backgroundColor = UIColor(red: 90, green: 90, blue: 90, alpha: 0.90)
+        scrollView.alwaysBounceVertical = false
+        scrollView.alwaysBounceHorizontal = false
+        scrollView.showsVerticalScrollIndicator = true
+        scrollView.flashScrollIndicators()
+        
+        scrollView.minimumZoomScale = 1.0
+        scrollView.maximumZoomScale = 10.0
+        
+        //dicomImageView.layer.cornerRadius = 5.0
+        dicomImageView.clipsToBounds  = true
+        
         do{
             let filePath = Bundle.main.path(forResource: "MRBRAIN", ofType: "DCM")
             let dataSet = try ImebraCodecFactory.load(fromFile: filePath)
@@ -41,8 +56,7 @@ class ViewController: UIViewController {
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return self.dicomImageView
     }
 }

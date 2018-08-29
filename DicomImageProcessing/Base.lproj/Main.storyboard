@@ -18,25 +18,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4x1-Cd-ZTD">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="647" translatesAutoresizingMaskIntoConstraints="NO" id="UbC-HH-Weo">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                            </imageView>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="xuW-7N-4Ie">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="xuW-7N-4Ie" secondAttribute="trailing" id="3gt-Oo-Cca"/>
+                                    <constraint firstItem="xuW-7N-4Ie" firstAttribute="top" secondItem="UbC-HH-Weo" secondAttribute="top" id="45w-R4-kxV"/>
+                                    <constraint firstItem="xuW-7N-4Ie" firstAttribute="leading" secondItem="UbC-HH-Weo" secondAttribute="leading" id="Whb-WK-8Uu"/>
+                                    <constraint firstAttribute="bottom" secondItem="xuW-7N-4Ie" secondAttribute="bottom" id="rLP-48-LyM"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4x1-Cd-ZTD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I1N-1G-pmP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4x1-Cd-ZTD" secondAttribute="bottom" id="T8H-CG-0zp"/>
-                            <constraint firstItem="4x1-Cd-ZTD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lKA-pS-OVo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4x1-Cd-ZTD" secondAttribute="trailing" id="za0-Au-spI"/>
+                            <constraint firstItem="UbC-HH-Weo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ItU-Vf-yeU"/>
+                            <constraint firstItem="UbC-HH-Weo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kc5-AY-SJN"/>
+                            <constraint firstItem="UbC-HH-Weo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="NM4-sB-6Vy"/>
+                            <constraint firstItem="UbC-HH-Weo" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gpd-DX-zBe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="dicomImageView" destination="4x1-Cd-ZTD" id="7u4-Ys-Ti9"/>
+                        <outlet property="dicomImageView" destination="xuW-7N-4Ie" id="Iwq-QK-z9o"/>
+                        <outlet property="scrollView" destination="UbC-HH-Weo" id="KF2-BC-htU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
         </scene>
     </scenes>
 </document>

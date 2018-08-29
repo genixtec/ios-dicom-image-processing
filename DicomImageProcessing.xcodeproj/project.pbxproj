@@ -18,8 +18,8 @@
 		C778BE772135623D000F043A /* libiconv.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C778BE752135623C000F043A /* libiconv.2.tbd */; };
 		C778BE782135623D000F043A /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C778BE762135623D000F043A /* libiconv.tbd */; };
 		C778BE7E21356985000F043A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C778BE7D21356985000F043A /* libc++.tbd */; };
-		C7F3D7FF2136677700015991 /* libimebra.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F3D7FE2136677700015991 /* libimebra.a */; };
 		C7F3D8022136682C00015991 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3D8012136682C00015991 /* Utils.swift */; };
+		C7F3D8042136868A00015991 /* libimebra.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F3D8032136868A00015991 /* libimebra.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +36,8 @@
 		C778BE752135623C000F043A /* libiconv.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.tbd; path = usr/lib/libiconv.2.tbd; sourceTree = SDKROOT; };
 		C778BE762135623D000F043A /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		C778BE7D21356985000F043A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		C7F3D7FE2136677700015991 /* libimebra.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libimebra.a; path = ../../../../libimebra.a; sourceTree = "<group>"; };
 		C7F3D8012136682C00015991 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		C7F3D8032136868A00015991 /* libimebra.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libimebra.a; path = ../../../../imebra_for_ios/libimebra.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7F3D7FF2136677700015991 /* libimebra.a in Frameworks */,
+				C7F3D8042136868A00015991 /* libimebra.a in Frameworks */,
 				C778BE7E21356985000F043A /* libc++.tbd in Frameworks */,
 				C778BE772135623D000F043A /* libiconv.2.tbd in Frameworks */,
 				C778BE782135623D000F043A /* libiconv.tbd in Frameworks */,
@@ -92,7 +92,7 @@
 		C75C44272133FA3D00B34FCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C7F3D7FE2136677700015991 /* libimebra.a */,
+				C7F3D8032136868A00015991 /* libimebra.a */,
 				C778BE7D21356985000F043A /* libc++.tbd */,
 				C778BE752135623C000F043A /* libiconv.2.tbd */,
 				C778BE762135623D000F043A /* libiconv.tbd */,
@@ -255,7 +255,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -319,23 +319,26 @@
 		C75C44252133F99100B34FCF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				ENABLE_BITCODE = YES;
+				DEVELOPMENT_TEAM = 58JM4GR289;
+				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = DicomImageProcessing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/Users/genix/imebra_for_ios_simulator/**",
+					"/Users/genix/imebra_for_ios/**",
 					"$(PROJECT_NAME)",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.genix.DicomImageProcessing;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.genix.dip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = /Users/genix/imebra_4_2_2_1/objectivec/include/imebraobjc/imebra_swift.h;
@@ -343,31 +346,33 @@
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
-				VALID_ARCHS = "arm64 armv7 armv7s";
+				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
 			name = Debug;
 		};
 		C75C44262133F99100B34FCF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				ENABLE_BITCODE = YES;
+				DEVELOPMENT_TEAM = 58JM4GR289;
+				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = DicomImageProcessing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/Users/genix/imebra_for_ios_simulator/**",
+					"/Users/genix/imebra_for_ios/**",
 					"$(PROJECT_NAME)",
 					"$(inherited)",
 				);
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.genix.DicomImageProcessing;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.genix.dip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = /Users/genix/imebra_4_2_2_1/objectivec/include/imebraobjc/imebra_swift.h;
@@ -375,7 +380,7 @@
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
-				VALID_ARCHS = "arm64 armv7 armv7s";
+				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
 			name = Release;
 		};
