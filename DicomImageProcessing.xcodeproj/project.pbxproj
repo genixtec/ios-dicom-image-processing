@@ -7,14 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C72E82E021354D9400093259 /* MRBRAIN.DCM in Resources */ = {isa = PBXBuildFile; fileRef = C72E82DE21354D9300093259 /* MRBRAIN.DCM */; };
+		C72E82E121354D9400093259 /* 0002.DCM in Resources */ = {isa = PBXBuildFile; fileRef = C72E82DF21354D9400093259 /* 0002.DCM */; };
 		C75C44162133F99000B34FCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75C44152133F99000B34FCF /* AppDelegate.swift */; };
 		C75C44182133F99000B34FCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75C44172133F99000B34FCF /* ViewController.swift */; };
 		C75C441B2133F99000B34FCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C75C44192133F99000B34FCF /* Main.storyboard */; };
 		C75C441D2133F99100B34FCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C75C441C2133F99100B34FCF /* Assets.xcassets */; };
 		C75C44202133F99100B34FCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C75C441E2133F99100B34FCF /* LaunchScreen.storyboard */; };
+		C778BE742135622F000F043A /* libiconv.2.4.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C778BE732135622F000F043A /* libiconv.2.4.0.tbd */; };
+		C778BE772135623D000F043A /* libiconv.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C778BE752135623C000F043A /* libiconv.2.tbd */; };
+		C778BE782135623D000F043A /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C778BE762135623D000F043A /* libiconv.tbd */; };
+		C778BE7E21356985000F043A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C778BE7D21356985000F043A /* libc++.tbd */; };
+		C7F3D7FF2136677700015991 /* libimebra.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F3D7FE2136677700015991 /* libimebra.a */; };
+		C7F3D8022136682C00015991 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3D8012136682C00015991 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C72E82DE21354D9300093259 /* MRBRAIN.DCM */ = {isa = PBXFileReference; lastKnownFileType = file; path = MRBRAIN.DCM; sourceTree = "<group>"; };
+		C72E82DF21354D9400093259 /* 0002.DCM */ = {isa = PBXFileReference; lastKnownFileType = file; path = 0002.DCM; sourceTree = "<group>"; };
 		C75C44122133F99000B34FCF /* DicomImageProcessing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DicomImageProcessing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C75C44152133F99000B34FCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C75C44172133F99000B34FCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +32,12 @@
 		C75C441C2133F99100B34FCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C75C441F2133F99100B34FCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C75C44212133F99100B34FCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C778BE732135622F000F043A /* libiconv.2.4.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.4.0.tbd; path = usr/lib/libiconv.2.4.0.tbd; sourceTree = SDKROOT; };
+		C778BE752135623C000F043A /* libiconv.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.tbd; path = usr/lib/libiconv.2.tbd; sourceTree = SDKROOT; };
+		C778BE762135623D000F043A /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		C778BE7D21356985000F043A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		C7F3D7FE2136677700015991 /* libimebra.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libimebra.a; path = ../../../../libimebra.a; sourceTree = "<group>"; };
+		C7F3D8012136682C00015991 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +45,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7F3D7FF2136677700015991 /* libimebra.a in Frameworks */,
+				C778BE7E21356985000F043A /* libc++.tbd in Frameworks */,
+				C778BE772135623D000F043A /* libiconv.2.tbd in Frameworks */,
+				C778BE782135623D000F043A /* libiconv.tbd in Frameworks */,
+				C778BE742135622F000F043A /* libiconv.2.4.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +61,7 @@
 			children = (
 				C75C44142133F99000B34FCF /* DicomImageProcessing */,
 				C75C44132133F99000B34FCF /* Products */,
+				C75C44272133FA3D00B34FCF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +76,29 @@
 		C75C44142133F99000B34FCF /* DicomImageProcessing */ = {
 			isa = PBXGroup;
 			children = (
+				C72E82DF21354D9400093259 /* 0002.DCM */,
+				C72E82DE21354D9300093259 /* MRBRAIN.DCM */,
 				C75C44152133F99000B34FCF /* AppDelegate.swift */,
 				C75C44172133F99000B34FCF /* ViewController.swift */,
 				C75C44192133F99000B34FCF /* Main.storyboard */,
 				C75C441C2133F99100B34FCF /* Assets.xcassets */,
 				C75C441E2133F99100B34FCF /* LaunchScreen.storyboard */,
 				C75C44212133F99100B34FCF /* Info.plist */,
+				C7F3D8012136682C00015991 /* Utils.swift */,
 			);
 			path = DicomImageProcessing;
+			sourceTree = "<group>";
+		};
+		C75C44272133FA3D00B34FCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C7F3D7FE2136677700015991 /* libimebra.a */,
+				C778BE7D21356985000F043A /* libc++.tbd */,
+				C778BE752135623C000F043A /* libiconv.2.tbd */,
+				C778BE762135623D000F043A /* libiconv.tbd */,
+				C778BE732135622F000F043A /* libiconv.2.4.0.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +159,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C72E82E021354D9400093259 /* MRBRAIN.DCM in Resources */,
+				C72E82E121354D9400093259 /* 0002.DCM in Resources */,
 				C75C44202133F99100B34FCF /* LaunchScreen.storyboard in Resources */,
 				C75C441D2133F99100B34FCF /* Assets.xcassets in Resources */,
 				C75C441B2133F99000B34FCF /* Main.storyboard in Resources */,
@@ -137,6 +176,7 @@
 			files = (
 				C75C44182133F99000B34FCF /* ViewController.swift in Sources */,
 				C75C44162133F99000B34FCF /* AppDelegate.swift in Sources */,
+				C7F3D8022136682C00015991 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,34 +319,63 @@
 		C75C44252133F99100B34FCF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = YES;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = DicomImageProcessing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/genix/imebra_for_ios_simulator/**",
+					"$(PROJECT_NAME)",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.genix.DicomImageProcessing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/genix/imebra_4_2_2_1/objectivec/include/imebraobjc/imebra_swift.h;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(PROJECT_NAME)-Swift.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
 		C75C44262133F99100B34FCF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = YES;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = DicomImageProcessing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/genix/imebra_for_ios_simulator/**",
+					"$(PROJECT_NAME)",
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.genix.DicomImageProcessing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/genix/imebra_4_2_2_1/objectivec/include/imebraobjc/imebra_swift.h;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(PROJECT_NAME)-Swift.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
